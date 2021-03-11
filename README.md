@@ -1,46 +1,68 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvel UI
 
-## Available Scripts
+Nesse nesse projeto foi utilizado:
+
+ReactJS
+Typescript
+Styled-Compenents
+Styled-React-Modal
+React-Awesome-Styled-Grid
+Axios
+
+## Variáveis de Ambiente
+
+`REACT_APP_PUBLIC_KEY` - Variável com a chave publica para acesso a API
+`REACT_APP_PRIVATE_KEY`- Variável com a chave privada para acesso a API
+`REACT_APP_API_MARVEL` - Variável coma URL da API
+
+## API
+
+Marvel Comics: https://gateway.marvel.com//v1/public/comics
+
+## Scripts 
 
 In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Instruções
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para rodar o projeto localmente é necessário criar um arquivo nomeado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+.env.local com as variáveis de ambiente, e então rodar o comando 
 
-### `yarn eject`
+`yarn start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+para rodar o servidor do projeto localmente um proxy que redireciona as requests 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+para a api. No Arquivo RestComics tem um método chamdo getComicsEnvDev que aponta 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+para a endpoint do proxy reverso, fazendo assim a request não precisar encaminhar
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+outros parametros de autenticação pelo frontend, pois está sendo realizado no proxy.
 
-## Learn More
+Ao acessar a url `http://localhost:3000` no seu navegador já vai ser possivel acessar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+esse projeto. Caso ocorra algum proble ao realizar e não apareça nenhum quadrinho,
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+é necessário utilizar  o getComicsEnvDev para fazer as requisições a  API quando estiver
+
+em desenvolvimento.
+
+### Arquitetura do Projeto
+
+Foi solicitado a criação de Single Page Application então o projeto foi dividido em 
+
+containers para facilitor o entendimento de oque está sendo exibido na tela. Os Components
+
+reutilizaveis forma adiconados na pasta components. As requisições junto com o cliente
+
+estão localizadas nas pasta Rest. Foi centralizado as modelagens que não são de components
+
+na pasta models.
