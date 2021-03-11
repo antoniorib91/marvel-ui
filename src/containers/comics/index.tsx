@@ -1,26 +1,52 @@
-import React, { FunctionComponent } from 'react';
-import Card from '../../components/Card';
-
-import S from './styles';
+import React, { FunctionComponent, MouseEvent, memo } from 'react';
+import { IComic } from '../../models/comic.model';
+import { useComicsContext } from '../../contexts/comics.context';
+import Buttons from './buttons';
+import NotFound from './not-found';
+import List from './list';
 
 interface IProps {
-  comics: Array<any>
+  isLoading: boolean,
+  onClickLoad: (e: MouseEvent<HTMLButtonElement>) => void,
+  onClickSend: (e: MouseEvent<HTMLButtonElement>) => void,
+  onClickDetail: (e: IComic) => void,
 }
 
 const Comics: FunctionComponent<IProps> = (props: IProps) => {
-  const { comics } = props;
+  const {
+    isLoading, onClickLoad, onClickSend,
+    onClickDetail,
+  } = props;
+
+  const {
+    viewComics, updateSelectedComics,
+  } = useComicsContext();
+
+  const handleOnCheckComic = (id: number) => {
+    updateSelectedComics(id);
+  };
 
   return (
-    <S.Container>
+    <>
       {
-        comics.length > 0 && comics.map((comic) => (
-          <Card key={`comic-${comic.id}`}>
-            <span>{ comic.title }</span>
-          </Card>
-        ))
+        viewComics.length > 0 ? (
+          <>
+            <List
+              onCheckComic={handleOnCheckComic}
+              onClickDetail={onClickDetail}
+            />
+            <Buttons
+              isLoading={isLoading}
+              onClickLoad={onClickLoad}
+              onClickSend={onClickSend}
+            />
+          </>
+        ) : (
+          <NotFound />
+        )
       }
-    </S.Container>
+    </>
   );
 };
 
-export default Comics;
+export default memo(Comics);
