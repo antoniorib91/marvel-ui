@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
-const defaultURL = process.env.REACT_APP_API;
+const defaultURL = process.env.REACT_APP_API_MARVEL;
 class HttpClient {
   private static axios: AxiosInstance = axios.create({ baseURL: defaultURL });
 
