@@ -1,15 +1,21 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { ModalProvider } from 'styled-react-modal';
+import { Container } from 'react-awesome-styled-grid';
 import Main from './containers/main';
 import Theme from './styles/theme';
-import S from './styles';
+import ComicsProvider from './providers/comics.provider';
 
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={Theme}>
-      <S.Container>
-        <Main />
-      </S.Container>
+      <ModalProvider>
+        <ComicsProvider>
+          <Container fluid>
+            <Main />
+          </Container>
+        </ComicsProvider>
+      </ModalProvider>
     </ThemeProvider>
   );
 }
