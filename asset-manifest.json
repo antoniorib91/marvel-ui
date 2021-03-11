@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/marvel-ui/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/marvel-ui/static/js/main.49cdc879.chunk.js",
-    "main.js.map": "/marvel-ui/static/js/main.49cdc879.chunk.js.map",
-    "runtime-main.js": "/marvel-ui/static/js/runtime-main.6e4f24e4.js",
-    "runtime-main.js.map": "/marvel-ui/static/js/runtime-main.6e4f24e4.js.map",
-    "static/js/2.a2798c59.chunk.js": "/marvel-ui/static/js/2.a2798c59.chunk.js",
-    "static/js/2.a2798c59.chunk.js.map": "/marvel-ui/static/js/2.a2798c59.chunk.js.map",
-    "static/js/3.ba860685.chunk.js": "/marvel-ui/static/js/3.ba860685.chunk.js",
-    "static/js/3.ba860685.chunk.js.map": "/marvel-ui/static/js/3.ba860685.chunk.js.map",
-    "index.html": "/marvel-ui/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/marvel-ui/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.a2798c59.chunk.js.LICENSE.txt": "/marvel-ui/static/js/2.a2798c59.chunk.js.LICENSE.txt",
-    "static/media/eye.86e72a86.svg": "/marvel-ui/static/media/eye.86e72a86.svg",
-    "static/media/marvel.fbd6092d.svg": "/marvel-ui/static/media/marvel.fbd6092d.svg",
-    "static/media/search.a003f42f.svg": "/marvel-ui/static/media/search.a003f42f.svg"
+    "main.css": "/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/static/js/main.8567426e.chunk.js",
+    "main.js.map": "/static/js/main.8567426e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f06b48bb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f06b48bb.js.map",
+    "static/js/2.a825399c.chunk.js": "/static/js/2.a825399c.chunk.js",
+    "static/js/2.a825399c.chunk.js.map": "/static/js/2.a825399c.chunk.js.map",
+    "static/js/3.ba860685.chunk.js": "/static/js/3.ba860685.chunk.js",
+    "static/js/3.ba860685.chunk.js.map": "/static/js/3.ba860685.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.a825399c.chunk.js.LICENSE.txt": "/static/js/2.a825399c.chunk.js.LICENSE.txt",
+    "static/media/eye.86e72a86.svg": "/static/media/eye.86e72a86.svg",
+    "static/media/marvel.fbd6092d.svg": "/static/media/marvel.fbd6092d.svg",
+    "static/media/search.a003f42f.svg": "/static/media/search.a003f42f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e4f24e4.js",
-    "static/js/2.a2798c59.chunk.js",
+    "static/js/runtime-main.f06b48bb.js",
+    "static/js/2.a825399c.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.49cdc879.chunk.js"
+    "static/js/main.8567426e.chunk.js"
   ]
 }
