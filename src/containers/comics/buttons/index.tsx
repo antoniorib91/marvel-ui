@@ -1,7 +1,6 @@
 import React, { FunctionComponent, MouseEvent, memo } from 'react';
 import { Row, Col } from 'react-awesome-styled-grid';
 import { useComicsContext } from '../../../contexts/comics.context';
-import Button from '../../../components/button';
 import S from './styles';
 
 type IProps = {
@@ -17,15 +16,15 @@ const Buttons: FunctionComponent<IProps> = (props: IProps) => {
     <Row>
       <Col justify="center" align="center">
         <S.ButtonsContainer>
-          <Button
+          <S.Button
             id="button-more-comics"
             type="button"
             disabled={isLoading}
             onClick={onClickLoad}
           >
             Load More Comics
-          </Button>
-          <Button
+          </S.Button>
+          <S.Button
             id="button-more-comics"
             type="button"
             secondary
@@ -33,7 +32,7 @@ const Buttons: FunctionComponent<IProps> = (props: IProps) => {
             onClick={onClickSend}
           >
             Send e-mail
-          </Button>
+          </S.Button>
         </S.ButtonsContainer>
       </Col>
     </Row>

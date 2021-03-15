@@ -1,5 +1,4 @@
 import React, { FunctionComponent, MouseEvent, memo } from 'react';
-import Button from '../../components/button';
 import Modal from '../../components/modal';
 import { IComic } from '../../models/comic.model';
 import S from './styles';
@@ -12,44 +11,56 @@ type IProps = {
 
 const Detail: FunctionComponent<IProps> = (props: IProps): JSX.Element => {
   const { comic, open, onClose } = props;
+  const noDescriptionMsg = 'This comic dont have description registered.';
 
   const getThumbnail = () => (
     `${comic.thumbnail.path}/portrait_uncanny.${comic.thumbnail.extension}`
   );
 
   const getCreatorsNames = () => (
-    comic.creators.available > 1 ? comic.creators.items.map((creator) => creator.name).join(', ') : comic.creators.items[0].name
+    comic.creators.available > 1
+      ? comic.creators.items.map((creator) => creator.name).join(', ')
+      : comic.creators.items[0].name
   );
 
   return (
     <Modal open={open}>
+      <S.Header>
+        <S.Title>Comic Detail</S.Title>
+      </S.Header>
       <S.Container>
-        <S.LContent>
-          <S.Img src={getThumbnail()} alt="Comic first page" />
-        </S.LContent>
-        <S.RContent>
-          <h4>{comic.title}</h4>
-          <S.Paragraph dangerouslySetInnerHTML={{ __html: comic.description || 'This comic dont have description registered.' }} />
-          <S.Paragraph>
-            { comic.creators.available > 0 && (
-            <strong>
-              Created By:
-              {' '}
-              {getCreatorsNames()}
-              .
-            </strong>
-            ) }
-          </S.Paragraph>
-        </S.RContent>
+        <S.ImgContainer>
+          <S.ImgWrapper>
+            <S.Img src={getThumbnail()} alt="Comic first page image" />
+          </S.ImgWrapper>
+        </S.ImgContainer>
+        <S.TextContainer>
+          <S.Subtitle>{comic.title}</S.Subtitle>
+          <S.TextContainerScrollable>
+            <S.Paragraph
+              dangerouslySetInnerHTML={{ __html: comic.description || noDescriptionMsg }}
+            />
+            <S.Paragraph>
+              { comic.creators.available > 0 && (
+              <strong>
+                Created By:
+                {' '}
+                {getCreatorsNames()}
+                .
+              </strong>
+              ) }
+            </S.Paragraph>
+          </S.TextContainerScrollable>
+        </S.TextContainer>
       </S.Container>
       <S.Footer>
-        <Button
+        <S.Button
           type="button"
           secondary
           onClick={onClose}
         >
           Voltar
-        </Button>
+        </S.Button>
       </S.Footer>
     </Modal>
   );

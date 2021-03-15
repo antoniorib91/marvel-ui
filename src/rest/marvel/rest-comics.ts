@@ -8,11 +8,7 @@ class RestComics {
 
   public static getComics(): Promise<AxiosResponse<IResponse>> {
     const url = `/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate&apikey=${this.key}`;
-    return HttpClient.get<IResponse>(url);
-  }
-
-  public static getComicsEnvDev(): Promise<AxiosResponse<IResponse>> {
-    const url = `/marvel/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate`;
+    // const url = `/marvel/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate`;
     return HttpClient.get<IResponse>(url);
   }
 }

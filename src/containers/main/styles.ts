@@ -7,9 +7,14 @@ const ContainerStyled = styled.div`
   @media only screen and (max-width: 48rem) {
     margin-top: 165px;
   }
+`;
 
+const MessageStyled = styled.h3`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.statusColorProblem};
 `;
 
 export default {
   Container: ContainerStyled,
+  Message: MessageStyled,
 };

@@ -17,7 +17,7 @@ const List: FunctionComponent<IProps> = (props: IProps) => {
       {
         viewComics.map((comic: IComic) => (
           <Col
-            xs={2}
+            xs={4}
             sm={2}
             lg={2}
             align="center"
