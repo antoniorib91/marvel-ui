@@ -11,6 +11,10 @@ const HeaderStyled = styled.header<IStyled>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media only screen and (max-width: 48rem) {
+    padding: 0 15px 0 1px;
+  }
 `;
 
 const LabelSearchStyled = styled.label`
@@ -47,12 +51,16 @@ const RightContainerStyled = styled.div`
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin: 0 15px;
+    margin-left: 15px;
   }
 `;
 
 const LogoStyled = styled(MarvelSVG)`
   margin: 15px;
+
+  @media only screen and (max-width: 48rem) {
+    margin-right: 0;
+  }
 `;
 
 export default {

@@ -4,15 +4,11 @@ import { IResponse } from '../../models/response.model';
 import Pagination from '../../services/pagination.service';
 
 class RestComics {
-  private static key = process.env.REAC_APP_PUBLIC_API_KEY;
+  private static key = process.env.REACT_APP_PUBLIC_KEY;
 
   public static getComics(): Promise<AxiosResponse<IResponse>> {
-    const url = `/marvel/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate&apiKey=${this.key}`;
-    return HttpClient.get<IResponse>(url);
-  }
-
-  public static getComicsEnvDev(): Promise<AxiosResponse<IResponse>> {
-    const url = `/marvel/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate`;
+    const url = `/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate&apikey=${this.key}`;
+    // const url = `/marvel/v1/public/comics${Pagination.getPaginationParams()}&orderBy=focDate`;
     return HttpClient.get<IResponse>(url);
   }
 }

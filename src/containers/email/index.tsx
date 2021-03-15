@@ -3,11 +3,10 @@ import React, {
   MouseEvent, useState,
 } from 'react';
 import { isValidEmail } from '@brazilian-utils/brazilian-utils';
+import Modal from '../../components/modal';
+import Input from '../../components/inputs/input';
 import { useComicsContext } from '../../contexts/comics.context';
 import { IComic } from '../../models/comic.model';
-import Modal from '../../components/modal';
-import Button from '../../components/button';
-import Input from '../../components/inputs/input';
 import S from './styles';
 
 type IProps = {
@@ -73,37 +72,47 @@ const Email: FunctionComponent<IProps> = (props: IProps): JSX.Element => {
         />
       </S.Header>
       <S.Container>
-        {
+        <S.EmailContent>
+          {
           selectedComics && selectedComics.length > 0
             && selectedComics.map((comic: IComic) => (
-              <S.EmailContent key={`comic-email${comic.id}`}>
-                <img
-                  src={getThumbnail(comic)}
-                  alt={comic.title}
-                />
-                <S.RContent>
-                  <h4>{comic.title}</h4>
-                  <S.Paragraph dangerouslySetInnerHTML={{ __html: comic.description || 'This comic dont have description registered.' }} />
-                </S.RContent>
-              </S.EmailContent>
+              <S.EmailWrapper key={`comic-email${comic.id}`}>
+                <S.ImgContainer>
+                  <S.ImgWrapper>
+                    <S.Img
+                      src={getThumbnail(comic)}
+                      alt={comic.title}
+                    />
+                  </S.ImgWrapper>
+                </S.ImgContainer>
+                <S.TextContainer>
+                  <S.Subtitle>
+                    {comic.title}
+                  </S.Subtitle>
+                  <S.Paragraph
+                    dangerouslySetInnerHTML={{ __html: comic.description || 'This comic dont have description registered.' }}
+                  />
+                </S.TextContainer>
+              </S.EmailWrapper>
             ))
         }
+        </S.EmailContent>
       </S.Container>
       <S.Footer>
-        <Button
+        <S.Button
           type="button"
           onClick={handleOnSend}
           disabled={emailError}
         >
           Enviar
-        </Button>
-        <Button
+        </S.Button>
+        <S.Button
           type="button"
           secondary
           onClick={handleOnClose}
         >
           Voltar
-        </Button>
+        </S.Button>
       </S.Footer>
     </Modal>
   );

@@ -11,7 +11,6 @@ const CssPrimary = ({ theme }: IDefaultStyledProps) => css`
   color: ${theme.colors.textColorContrast};
   border: 1px solid ${theme.colors.mainColor};
 
-
   &:hover {
     opacity: 0.8;
     background-color: ${theme.colors.mainColorContrast};
@@ -61,7 +60,6 @@ const ButtonStyled = styled.button<IProps>`
   border: none;
   outline: none;
   padding: 15px;
-  min-width: 120px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.mainColor};
   color: ${({ theme }) => theme.colors.textColorContrast};

@@ -11,6 +11,7 @@ const FooterStyled = styled.footer`
 
 const LinkStyled = styled.a`
   text-decoration: none;
+  word-break: break-word;
   color: ${({ theme }) => theme.colors.textColor};
   ${ParagraphRegular};
 

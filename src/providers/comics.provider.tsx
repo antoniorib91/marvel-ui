@@ -36,16 +36,14 @@ const ComicsProvider: FunctionComponent<IProps> = (props: IProps) => {
   };
 
   const updateSelectedComics = (id: number) => {
+    let prevComics = [...selectedComics];
     if (!isComicSelected(id)) {
-      setSelectedComics((previous: Array<IComic>) => {
-        const newComic = comics.filter((comic: IComic) => comic.id === id);
-        previous.push(newComic[0]);
-        return [...previous];
-      });
+      const newComic = comics.filter((comic: IComic) => comic.id === id);
+      prevComics.push(newComic[0]);
     } else {
-      setSelectedComics((previous: Array<IComic>) => (
-        [...previous.filter((comic: IComic) => comic.id !== id)]));
+      prevComics = prevComics.filter((comic: IComic) => comic.id !== id);
     }
+    setSelectedComics([...prevComics]);
   };
 
   const contextValue = {
