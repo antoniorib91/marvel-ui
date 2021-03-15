@@ -35,25 +35,21 @@ In the project directory, you can run:
 
 Para rodar o projeto localmente é necessário criar um arquivo nomeado
 
-.env.local com as variáveis de ambiente, e então rodar o comando 
+.env.local e colocar as variáveis de ambiente. O Projeto roda com um 
+
+proxy local para realizar as requests para a api. Antes de iniciar o server 
+
+é necessário comentar a variável 'defaultURL' que está no arquivo http-client
+
+e descomentar a variável com o mesmo nome que está comentada já. Deve ser feito o
+
+mesmo com a 'url' no arquivo rest-comics. Após realizada essas ações roda o comando:
 
 `yarn start`
 
-para rodar o servidor do projeto localmente um proxy que redireciona as requests 
-
-para a api. No Arquivo RestComics tem um método chamdo getComicsEnvDev que aponta 
-
-para a endpoint do proxy reverso, fazendo assim a request não precisar encaminhar
-
-outros parametros de autenticação pelo frontend, pois está sendo realizado no proxy.
-
 Ao acessar a url `http://localhost:3000` no seu navegador já vai ser possivel acessar
 
-esse projeto. Caso ocorra algum proble ao realizar e não apareça nenhum quadrinho,
-
-é necessário utilizar  o getComicsEnvDev para fazer as requisições a  API quando estiver
-
-em desenvolvimento.
+esse projeto. 
 
 ### Arquitetura do Projeto
 
