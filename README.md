@@ -43,7 +43,7 @@ e descomentar a variável com o mesmo nome que já estava comentada. Deve ser fe
 
 mesmo processo com a variável 'url' no arquivo rest-comics. Após realizada essas ações roda o comando:
 
-`yarn start`
+`yarn start` ou `npm run start`
 
 Ao acessar a url `http://localhost:3000` no seu navegador já vai ser possivel acessar
 
