@@ -41,9 +41,9 @@ proxy local para realizar as requests para a api. Antes de iniciar o server
 
 é necessário comentar a variável 'defaultURL' que está no arquivo http-client
 
-e descomentar a variável com o mesmo nome que está comentada já. Deve ser feito o
+e descomentar a variável com o mesmo nome que já estava comentada. Deve ser feito o
 
-mesmo com a 'url' no arquivo rest-comics. Após realizada essas ações roda o comando:
+mesmo processo com a variável 'url' no arquivo rest-comics. Após realizada essas ações roda o comando:
 
 `yarn start`
 
