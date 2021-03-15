@@ -25,11 +25,9 @@ Marvel Comics: https://gateway.marvel.com//v1/public/comics
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start` ou `npm run start`
 
-### `yarn test`
-
-### `yarn build`
+### `yarn build` ou `npm run build`
 
 ### Instruções
 
