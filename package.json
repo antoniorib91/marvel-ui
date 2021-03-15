@@ -1,6 +1,7 @@
 {
   "name": "marvel",
   "version": "0.1.0",
+  "homepage": "https://antoniorib91.github.io/marvel-ui/",
   "private": true,
   "dependencies": {
     "@brazilian-utils/brazilian-utils": "^1.0.0-rc.12",
@@ -30,11 +31,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "homepage": "antoniorib91.github.io/marvel-ui",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

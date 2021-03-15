@@ -19,6 +19,7 @@ const FooterContainerStyled = styled.div`
 const ParagraphStyled = styled.p`
   margin: 10px;
   color: ${({ theme }) => theme.colors.textColorContrast};
+  word-wrap: break-word;
   ${ParagraphRegular};
 `;
 
@@ -31,7 +32,7 @@ const ImageWrapperStyled = styled.div`
 
 const ImageContainerStyled = styled.div`
   width: 100%;
-  height: 300px;
+  height: 270px;
   display: flex;
 `;
 
