@@ -1,6 +1,6 @@
-# Getting Started with Create React App
-
 # Marvel UI
+
+Projeto no github pages: https://antoniorib91.github.io/marvel-ui/
 
 Nesse nesse projeto foi utilizado:
 
