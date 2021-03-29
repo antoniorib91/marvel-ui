@@ -5,10 +5,15 @@ Projeto no github pages: https://antoniorib91.github.io/marvel-ui/
 Nesse nesse projeto foi utilizado:
 
 ReactJS
+
 Typescript
+
 Styled-Compenents
+
 Styled-React-Modal
+
 React-Awesome-Styled-Grid
+
 Axios
 
 ## Variáveis de Ambiente
